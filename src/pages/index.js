@@ -13,7 +13,7 @@ export default function Home() {
     <Layout>
       <h3>Exploring the unknown</h3>
       <div style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-        <img src="https://source.unsplash.com/random/900x400" />
+        <img src="https://source.unsplash.com/random/900x400" alt="" />
       </div>
 
       <div>
