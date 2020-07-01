@@ -5,6 +5,25 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Deep Dive",
+    description: "Exploring areas of interest",
+  },
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }
