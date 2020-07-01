@@ -31,9 +31,15 @@ export default function Layout({ children }) {
       </header>
       {children}
       <footer>
-        <Link>
-          <a href="https://github.com/NelsonG-C">Github</a>
-        </Link>
+        <div>
+          <Link>
+            <a href="https://github.com/NelsonG-C">Github</a>
+          </Link>
+        </div>
+        <div>
+          <p>Site developed by Nelson Gardner-Challis</p>
+          <p>Made in Gatsby.js</p>
+        </div>
       </footer>
     </div>
   )
