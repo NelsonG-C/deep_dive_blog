@@ -23,7 +23,7 @@ export default function Layout({ children, location }) {
         </Link>
 
         <ul style={{ float: "right" }}>
-          <HeaderTabs to="/programming">Programming</HeaderTabs>
+          <HeaderTabs to="/landing/Test">Programming</HeaderTabs>
           <HeaderTabs to="/altmeat">Alt Meat</HeaderTabs>
           <HeaderTabs to="/neuroscience">Neuroscience</HeaderTabs>
           <HeaderTabs to="/psychology">Psychology</HeaderTabs>
