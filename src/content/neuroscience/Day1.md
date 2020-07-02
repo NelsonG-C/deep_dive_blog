@@ -1,5 +1,5 @@
 ---
-title: "Day 1: Alt Meat is here"
+title: "Neuro Beginnings"
 date: "2020-06-29"
 ---
 
