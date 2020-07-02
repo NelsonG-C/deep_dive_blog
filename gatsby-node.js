@@ -35,20 +35,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allFile(filter: { relativeDirectory: { eq: "content/landing" } }) {
-        edges {
-          node {
-            id
-            relativePath
-            relativeDirectory
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-            }
-          }
-        }
-      }
     }
   `)
   console.log(JSON.stringify(result, null, 4))
@@ -58,16 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/blog-page.js`),
       context: {
         slug: node.fields.slug,
-      },
-    })
-  })
-
-  result.data.allFile.edges.forEach(({ node }) => {
-    createPage({
-      path: node.childMarkdownRemark.fields.slug,
-      component: path.resolve(`./src/templates/topic-page.js`),
-      context: {
-        slug: node.childMarkdownRemark.fields.slug,
       },
     })
   })
