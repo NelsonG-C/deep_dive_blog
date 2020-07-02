@@ -8,7 +8,7 @@ const HeaderTabs = props => (
   </li>
 )
 
-export default function Layout({ children }) {
+export default function Layout({ children, location }) {
   return (
     <div style={{ margin: `3rem auto`, maxWidth: 900 }}>
       <header>
