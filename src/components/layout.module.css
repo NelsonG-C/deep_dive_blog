@@ -17,7 +17,17 @@ li {
 }
 
 .layout {
-  margin: 2rem;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.content {
+  height: auto;
+  width: auto;
+}
+
+.contentContainer {
+  max-width: 80%;
+  margin: auto;
 }
 
 .logo {
@@ -29,6 +39,12 @@ li {
   float: left;
 }
 
+.heading {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
 .pageTitle {
   display: inline-block;
   white-space: nowrap;
@@ -37,4 +53,18 @@ li {
 .title {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+
+.imageTextBox {
+  display: inline-block;
+  width: 100%;
 }
