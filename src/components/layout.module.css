@@ -17,7 +17,12 @@ li {
 }
 
 .layout {
-  margin: 0 2rem 2rem 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.layoutBottom {
+  margin-bottom: 2rem;
 }
 
 .content {
@@ -34,6 +39,7 @@ li {
   height: auto;
   margin-bottom: 0;
   margin-right: 0.5rem;
+  margin-left: 2rem;
   width: 100px;
   max-width: 100%;
   float: left;

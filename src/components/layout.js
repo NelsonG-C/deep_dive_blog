@@ -14,14 +14,13 @@ const HeaderTabs = props => (
 
 export default function Layout({ children, location }) {
   return (
-    <div className={styles.layout}>
+    <div>
       <header>
         <div
           style={{
             display: "inline-block",
             whiteSpace: "nowrap",
             width: "100%",
-            marginRight: "4rem",
           }}
         >
           <div className={styles.heading}>
@@ -41,6 +40,7 @@ export default function Layout({ children, location }) {
               display: "inline-block",
               marginRight: "4rem",
               marginTop: "1rem",
+              marginBottom: 0,
             }}
           >
             <div style={{ display: "inline-block" }}>

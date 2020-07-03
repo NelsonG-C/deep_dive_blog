@@ -14,15 +14,32 @@ export default function Home() {
     <div>
       <div>
         <Layout>
-          <div className={styles.contentContainer}>
-            <h3>Exploring the unknown</h3>
-            <div style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-              <img src="https://source.unsplash.com/random/900x400" alt="" />
-            </div>
+          <div style={{ marginBottom: "1rem", objectFit: "cover" }}>
+            <img src="https://source.unsplash.com/random/1500x350" alt="" />
+          </div>
+          <div className={styles.layout}>
+            <div className={styles.contentContainer}>
+              <div>
+                <div className={styles.imageTextBox}>
+                  <h4 style={{ maxWidth: "450px", float: "left" }}>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </h4>
+                  <img src={profile} alt="" className={styles.profilePicture} />
+                </div>
+              </div>
 
-            <div>
-              <div className={styles.imageTextBox}>
-                <h4 style={{ maxWidth: "450px", float: "left" }}>
+              <div>
+                <h3>Why make this blog?</h3>
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -33,41 +50,24 @@ export default function Home() {
                   the release of Letraset sheets containing Lorem Ipsum
                   passages, and more recently with desktop publishing software
                   like Aldus PageMaker including versions of Lorem Ipsum.
-                </h4>
-                <img src={profile} alt="" className={styles.profilePicture} />
+                </p>
               </div>
-            </div>
 
-            <div>
-              <h3>Why make this blog?</h3>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-            </div>
-
-            <div>
-              <h3>
-                Like this blog? Want more content like this? Need to get in
-                touch?
-              </h3>
-              <p>
-                Check out my Github, where you can reach out to me.
-                Alternatively, send me an email with your thoughts and I'll get
-                back to you.
-              </p>
-              <p>
-                I'm also working as a freelancer, so please contact me if you
-                like what you see and need help with a project.
-              </p>
+              <div>
+                <h3>
+                  Like this blog? Want more content like this? Need to get in
+                  touch?
+                </h3>
+                <p>
+                  Check out my Github, where you can reach out to me.
+                  Alternatively, send me an email with your thoughts and I'll
+                  get back to you.
+                </p>
+                <p>
+                  I'm also working as a freelancer, so please contact me if you
+                  like what you see and need help with a project.
+                </p>
+              </div>
             </div>
           </div>
         </Layout>
