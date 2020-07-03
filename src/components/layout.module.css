@@ -1,0 +1,40 @@
+html {
+  background-color: floralwhite;
+}
+h1 {
+  text-shadow: none;
+}
+
+a {
+  box-shadow: none;
+  text-shadow: none;
+  background-image: none;
+}
+
+li {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.layout {
+  margin: 2rem;
+}
+
+.logo {
+  height: auto;
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+  width: 100px;
+  max-width: 100%;
+  float: left;
+}
+
+.pageTitle {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import logo from "./wave.jpg"
+import comp from "../images/computer.png"
+import brain from "../images/brain.png"
+import petriDish from "../images/petriDish.png"
+import styles from "./layout.module.css"
 
 const HeaderTabs = props => (
   <li style={{ display: "inline-block", marginRight: "1rem" }}>
@@ -10,24 +14,96 @@ const HeaderTabs = props => (
 
 export default function Layout({ children, location }) {
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 900 }}>
+    <div className={styles.layout}>
       <header>
-        <img
-          src={logo}
-          alt="Hello"
-          width="100px"
-          style={{ marginRight: "0.5rem", display: "inline" }}
-        />
-        <Link to="/">
-          <h1 style={{ display: "inline" }}>Deep Dive</h1>
-        </Link>
-
-        <ul style={{ float: "right" }}>
-          <HeaderTabs to="/programming/">Programming</HeaderTabs>
-          <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
-          <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
-          <HeaderTabs to="/psychology/">Psychology</HeaderTabs>
-        </ul>
+        <div
+          style={{
+            display: "inline-block",
+            whiteSpace: "nowrap",
+            width: "100%",
+            marginRight: "4rem",
+          }}
+        >
+          <div className={styles.pageTitle}>
+            <img src={logo} alt="Hello" className={styles.logo} />
+            <div className={styles.pageTitle}>
+              <Link to="/">
+                <h1 className={styles.title}>Deep Dive</h1>
+              </Link>
+              <p className={styles.subtitle}>
+                Exploring the unknown knowledge areas
+              </p>
+            </div>
+          </div>
+          <ul
+            style={{
+              float: "right",
+              display: "inline-block",
+              marginRight: "2.5rem",
+            }}
+          >
+            <div style={{ display: "inline-block" }}>
+              <img
+                src={comp}
+                alt=""
+                width="50px"
+                style={{
+                  display: "block",
+                  alignItems: "center",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: 0,
+                }}
+              />
+              <HeaderTabs to="/programming/">Programming</HeaderTabs>
+            </div>
+            <div style={{ display: "inline-block" }}>
+              <img
+                src={petriDish}
+                alt=""
+                width="50px"
+                style={{
+                  display: "block",
+                  alignItems: "center",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: 0,
+                }}
+              />
+              <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
+            </div>
+            <div style={{ display: "inline-block" }}>
+              <img
+                src={brain}
+                alt=""
+                width="50px"
+                style={{
+                  display: "block",
+                  alignItems: "center",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: 0,
+                }}
+              />
+              <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
+            </div>
+            <div style={{ display: "inline-block" }}>
+              <img
+                src={brain}
+                alt=""
+                width="40px"
+                style={{
+                  display: "block",
+                  alignItems: "center",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: 0,
+                }}
+              />
+              <HeaderTabs to="/psychology/">Psychology</HeaderTabs>
+            </div>
+          </ul>
+        </div>
       </header>
       {children}
       <footer>
