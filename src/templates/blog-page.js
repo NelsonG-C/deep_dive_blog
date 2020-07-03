@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SideMenu from "../components/menu"
-import styles from "../components/layout"
+import styles from "../components/layout.module.css"
 
 export default function BlogPost({ data, location }) {
   const post = data.markdownRemark
@@ -12,9 +12,11 @@ export default function BlogPost({ data, location }) {
       <SideMenu location={location} />
       <div>
         <Layout>
-          <div>
-            <h1>{post.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div className={styles.layout}>
+            <div className={styles.contentContainer}>
+              <h1>{post.frontmatter.title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
           </div>
         </Layout>
       </div>
