@@ -24,7 +24,7 @@ export default function Layout({ children, location }) {
             marginRight: "4rem",
           }}
         >
-          <div className={styles.pageTitle}>
+          <div className={styles.heading}>
             <img src={logo} alt="Hello" className={styles.logo} />
             <div className={styles.pageTitle}>
               <Link to="/">
@@ -39,7 +39,8 @@ export default function Layout({ children, location }) {
             style={{
               float: "right",
               display: "inline-block",
-              marginRight: "2.5rem",
+              marginRight: "4rem",
+              marginTop: "1rem",
             }}
           >
             <div style={{ display: "inline-block" }}>
@@ -91,7 +92,7 @@ export default function Layout({ children, location }) {
               <img
                 src={brain}
                 alt=""
-                width="40px"
+                width="50px"
                 style={{
                   display: "block",
                   alignItems: "center",
@@ -105,7 +106,7 @@ export default function Layout({ children, location }) {
           </ul>
         </div>
       </header>
-      {children}
+      <div>{children}</div>
       <footer>
         <div>
           <Link>
