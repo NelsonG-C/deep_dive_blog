@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import profile from "../images/profile.jpg"
 import styles from "../components/layout.module.css"
+import sea from "../images/sea1.jpg"
 
 export default function Home() {
   //Code contains sections for landing page
@@ -15,13 +16,13 @@ export default function Home() {
       <div>
         <Layout>
           <div style={{ marginBottom: "1rem", objectFit: "cover" }}>
-            <img src="https://source.unsplash.com/random/1500x350" alt="" />
+            <img src={sea} alt="" className={styles.frontPageImage} />
           </div>
           <div className={styles.layout}>
             <div className={styles.contentContainer}>
               <div>
                 <div className={styles.imageTextBox}>
-                  <h4 style={{ maxWidth: "450px", float: "left" }}>
+                  <h4 style={{ maxWidth: "500px", float: "left" }}>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
