@@ -25,6 +25,13 @@ li {
   margin-bottom: 2rem;
 }
 
+.footer {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
 .content {
   height: auto;
   width: auto;
@@ -40,8 +47,8 @@ li {
   margin-bottom: 0;
   margin-right: 0.5rem;
   margin-left: 2rem;
-  width: 100px;
-  max-width: 100%;
+  width: 70px;
+
   float: left;
 }
 
@@ -66,11 +73,16 @@ li {
   width: 300px;
   height: 300px;
   float: right;
-  margin-right: 4rem;
+  margin-right: 3.5rem;
   margin-top: 2rem;
 }
 
 .imageTextBox {
   display: inline-block;
   width: 100%;
+}
+
+.frontPageImage {
+  width: 100%;
+  max-height: 450px;
 }

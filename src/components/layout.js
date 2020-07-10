@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "./wave.jpg"
+import logo from "./wave.png"
 import comp from "../images/computer.png"
 import brain from "../images/brain.png"
 import petriDish from "../images/petriDish.png"
@@ -107,7 +107,7 @@ export default function Layout({ children, location }) {
         </div>
       </header>
       <div>{children}</div>
-      <footer>
+      <footer className={styles.footer}>
         <div>
           <Link>
             <a href="https://github.com/NelsonG-C">Github</a>
