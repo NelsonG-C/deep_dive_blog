@@ -15,14 +15,27 @@ export default function SideMenu({ location }) {
   console.log("this is slug", slug)
   return (
     <Menu styles={styles} right>
-      <Link className="menu-item" to={`/${slug}/Day1`}>
-        Day 1
+      <Link className="menu-item" to={`/${slug}`}>
+        Introduction
       </Link>
-      <Link className="menu-item" to={`/${slug}/Day2`}>
-        Day 2
+      {getMenuLinks(slug)}
+      <Link className="menu-item" to={`/${slug}/summary`}>
+        Summary
       </Link>
     </Menu>
   )
+}
+
+const getMenuLinks = slug => {
+  var content = []
+  for (var i = 1; i < 8; i++) {
+    content.push(
+      <Link className="menu-item" to={`/${slug}/Day${i}`}>
+        Day {i}
+      </Link>
+    )
+  }
+  return content
 }
 
 var styles = {
