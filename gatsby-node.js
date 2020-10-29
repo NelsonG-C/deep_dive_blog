@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+//called when a node is created or updated
 exports.onCreateNode = ({ node, getNode, actions }) => {
   let slug
   const { createNodeField } = actions
@@ -8,7 +9,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const fileNode = getNode(node.parent)
     const relativePath = path.parse(fileNode.relativePath)
     const splitDir = relativePath.dir.split("/")
-
+    //creating base slug or nested length slug
     if (splitDir.length === 2 && splitDir.name !== `index`) {
       slug = `/${splitDir[1]}/${relativePath.name}/`
     } else {
@@ -21,7 +22,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
-
+//querying for nodes and then creating pages based off returned results
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
