@@ -55,7 +55,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3>Why make this blog?</h3>
+                <h2>Why make this blog?</h2>
                 <p>
                   Like for many people, the year of 2020 has not gone as
                   planned. The startup I had been working at collapsed due to
@@ -89,7 +89,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3>How did the Deep Dive work?</h3>
+                <h2>How did the Deep Dive work?</h2>
                 <p>
                   I set an area for each week. On the weekend beforehand, I
                   would set out a rough list of ideas I was curious about, ways
@@ -110,7 +110,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3>My "Rules" for the Deep Dive</h3>
+                <h2>My "Rules" for the Deep Dive</h2>
                 <p>I had three simple tenets for my Deep Dive Weeks:</p>
                 <p style={{ fontWeight: "bold" }}>
                   Immersion, curiosity, and fun
@@ -139,7 +139,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3>Read about programming, the first Deep Dive week</h3>
+                <h2>Read about programming, the first Deep Dive week</h2>
                 <button>
                   <Link to="/programming">
                     <h1 className={styles.title}>Programming Deep Dive</h1>
@@ -148,10 +148,10 @@ export default function Home() {
               </div>
 
               <div>
-                <h3>
+                <h2>
                   Like this blog? Want more content like this? Want to get in
                   touch?
-                </h3>
+                </h2>
                 <p>
                   Check out my Github, where you can reach out to me. Send me an
                   email with your thoughts and I'll get back to you.
