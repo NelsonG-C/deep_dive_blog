@@ -18,31 +18,26 @@ export default function Home() {
       <div>
         <Layout>
           <div style={{ marginBottom: "1rem", objectFit: "cover" }}>
-            <img src={sea} alt="" className={styles.frontPageImage} />
-          </div>
-          <div className={styles.layout}>
-            <div className={styles.contentContainer}>
-              <div>
+            <div className={styles.frontPageImage}>
+              <div className={styles.imageOverlay}>
                 <div className="grid-container">
-                  <div>
-                    <h4 style={{ maxWidth: "500px", float: "left" }}>
-                      Hi! My name is Nelson and I'm a software developer based
-                      in Melbourne.
+                  <div className={styles.overlayText}>
+                    <h4>
+                      Hi, I'm Nelson. I'm a software developer based in
+                      Melbourne.
                     </h4>
-                    <h4 style={{ maxWidth: "500px", float: "left" }}>
+                    <p>
                       In July 2020 I ran an experiment to help figure out my
                       next career direction.
-                    </h4>
-                    <h4 style={{ maxWidth: "500px", float: "left" }}>
-                      I called it the Deep Dive.
-                    </h4>
-                    <h4 style={{ maxWidth: "500px", float: "left" }}>
+                    </p>
+                    <p>I called it the Deep Dive.</p>
+                    <p>
                       This blog outlines my experiment, experiences, and what I
                       learned along the way. If you want to figure out your next
                       career step or learn about the topics I covered, read on.
                       This experiment changed my life. I hope it can help you
                       too.
-                    </h4>
+                    </p>
                   </div>
                   <div className={styles.imageTextBox}>
                     <img
@@ -53,7 +48,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+            </div>
+          </div>
+          <div className={styles.layout}>
+            <div className={styles.contentContainer}>
               <div>
                 <h2>Why make this blog?</h2>
                 <p>
