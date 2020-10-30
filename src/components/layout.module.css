@@ -5,6 +5,7 @@ h1,
 h2 {
   text-shadow: none;
   color: #1ca086;
+  margin-top: 0;
 }
 
 a {
@@ -53,7 +54,7 @@ li {
   margin-bottom: 0;
   margin-right: 0.5rem;
   margin-left: 2rem;
-  width: 70px;
+  width: 3.5rem;
 
   float: left;
 }
@@ -62,6 +63,20 @@ li {
   display: inline-block;
   white-space: nowrap;
   margin-top: 1rem;
+}
+
+.headerIcons {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.headerMenu {
+  margin-right: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  float: right;
 }
 
 .pageTitle {
@@ -83,6 +98,9 @@ li {
   float: right;
   margin-right: 3.5rem;
   margin-top: 2rem;
+  border: 0.5px solid #21313c;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
+  box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
 }
 
 .imageTextBox {
@@ -93,6 +111,24 @@ li {
 .frontPageImage {
   width: 100%;
   max-height: 450px;
+  min-height: 27rem;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
+  box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
+  background-image: url("../images/sea1.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageOverlay {
+  background-color: white;
+  width: 95%;
+  height: 85%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: inset 0px 0px 5px 3px rgba(33, 49, 60, 0.5);
+  box-shadow: inset 0px 0px 9px 2px rgba(33, 49, 60, 0.4);
 }
 
 .subtitle {
@@ -111,7 +147,7 @@ header {
   padding-bottom: 0.2rem;
 }
 
-.headerLine {
+.headerOverlay {
   background-color: #21313c;
 }
 
@@ -124,5 +160,223 @@ header {
   background-color: #30414d;
 }
 
-@media screen and (max-width: 700px) {
+.overlayText {
+  margin-left: 1rem;
+  max-width: 600px;
+}
+
+.overlayText h4 {
+  color: #1ca086;
+}
+
+footer {
+  background-color: #21313c;
+  padding-top: 1rem;
+  color: white;
+}
+
+.footerContainer {
+  padding: 1rem;
+}
+
+.footerNav a {
+  margin-left: 0.35rem;
+}
+
+.socialIcons a {
+  margin-left: 0.5rem;
+}
+
+.postNote {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.1rem;
+}
+
+span {
+  margin-left: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+
+  .profilePicture {
+    display: none;
+  }
+
+  .imageTextBox {
+    display: flex;
+    width: 100%;
+  }
+
+  .frontPageImage {
+    background-image: none;
+    box-shadow: none;
+  }
+
+  .imageOverlay {
+    background-color: white;
+    width: 95%;
+    height: 85%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(33, 49, 60, 0.5);
+    box-shadow: inset 0px 0px 9px 2px rgba(33, 49, 60, 0.4);
+  }
+
+  .subtitle {
+    display: inline-block;
+    margin-right: 3rem;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  }
+
+  .headerItem li {
+    font-size: 12px;
+  }
+
+  .overlayText {
+    margin-left: 1rem;
+    max-width: 600px;
+  }
+
+  .overlayText h4 {
+    color: #1ca086;
+  }
+
+  footer {
+    background-color: #21313c;
+    padding-top: 1rem;
+    color: white;
+  }
+
+  .footerContainer {
+    padding: 1rem;
+  }
+
+  .footerNav a {
+    margin-left: 0.35rem;
+  }
+
+  .socialIcons a {
+    margin-left: 0.5rem;
+  }
+
+  .postNote {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  span {
+    margin-left: 0.25rem;
+  }
+}
+
+/* CSS taken from Bootstrap to avoid clashing */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.colAuto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.666667%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.333333%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.666667%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.333333%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.666667%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.333333%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.666667%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
 }
