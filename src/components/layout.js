@@ -7,6 +7,9 @@ import petriDish from "../images/petriDish.png"
 import note from "../images/note.png"
 import styles from "./layout.module.css"
 
+//icons
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
+
 const HeaderTabs = props => (
   <li style={{ display: "inline-block", marginRight: "1rem" }}>
     <Link to={props.to}>{props.children}</Link>
@@ -17,102 +20,72 @@ export default function Layout({ children, location }) {
   return (
     <div>
       <header>
-        <div className={styles.headerLine}>
-          <div>
-            <div className={styles.heading}>
-              <img src={logo} alt="Hello" className={styles.logo} />
-              <div className={styles.pageTitle}>
-                <Link to="/">
-                  <h1 className={styles.title}>Deep Dive</h1>
-                </Link>
-                <p className={styles.subtitle}>
-                  Exploring the unknown knowledge areas
-                </p>
+        <div className={`${styles.container} ${styles.headerOverlay}`}>
+          <div className={styles.row}>
+            <div className={styles.colAuto}>
+              <div className={styles.heading}>
+                <div>
+                  <img src={logo} alt="Hello" className={styles.logo} />
+                  <div className={styles.pageTitle}>
+                    <Link to="/">
+                      <h1 className={styles.title}>Deep Dive</h1>
+                    </Link>
+                    <p className={styles.subtitle}>
+                      Exploring the unknown knowledge areas
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <ul
-              style={{
-                float: "right",
-                display: "inline-block",
-                marginRight: "4rem",
-                marginTop: "1rem",
-                marginBottom: 0,
-              }}
-            >
-              <div className={styles.headerItem}>
-                <img
-                  src={comp}
-                  alt=""
-                  width="50px"
-                  style={{
-                    display: "block",
-                    alignItems: "center",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    marginBottom: 0,
-                  }}
-                />
-                <HeaderTabs to="/programming/">Programming</HeaderTabs>
-              </div>
-              <div className={styles.headerItem}>
-                <img
-                  src={petriDish}
-                  alt=""
-                  width="50px"
-                  style={{
-                    display: "block",
-                    alignItems: "center",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    marginBottom: 0,
-                  }}
-                />
-                <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
-              </div>
-              <div className={styles.headerItem}>
-                <img
-                  src={brain}
-                  alt=""
-                  width="50px"
-                  style={{
-                    display: "block",
-                    alignItems: "center",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    marginBottom: 0,
-                  }}
-                />
-                <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
-              </div>
-              <div className={styles.headerItem}>
-                <img
-                  src={note}
-                  alt=""
-                  width="50px"
-                  style={{
-                    display: "block",
-                    alignItems: "center",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    marginBottom: 0,
-                  }}
-                />
-                <HeaderTabs to="/psychology/">Entrepreneurship</HeaderTabs>
-              </div>
-            </ul>
+            <div className={styles.colAuto}>
+              <ul>
+                <div className={styles.headerItem}>
+                  <img src={comp} alt="" className={styles.headerIcons} />
+                  <HeaderTabs to="/programming/">Programming</HeaderTabs>
+                </div>
+                <div className={styles.headerItem}>
+                  <img src={petriDish} alt="" className={styles.headerIcons} />
+                  <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
+                </div>
+                <div className={styles.headerItem}>
+                  <img src={brain} alt="" className={styles.headerIcons} />
+                  <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
+                </div>
+                <div className={styles.headerItem}>
+                  <img src={note} alt="" className={styles.headerIcons} />
+                  <HeaderTabs to="/entrepreneur/">Entrepreneurship</HeaderTabs>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
       <div className={styles.mainContent}>{children}</div>
       <footer className={styles.footer}>
-        <div>
-          <Link>
-            <a href="https://github.com/NelsonG-C">Github</a>
-          </Link>
-        </div>
-        <div>
-          <p>Site developed by Nelson Gardner-Challis</p>
-          <p>Made in Gatsby.js</p>
+        <div className={styles.footerContainer}>
+          <div>
+            <nav className={styles.footerNav}>
+              <HeaderTabs to="/">Home</HeaderTabs>
+              <HeaderTabs to="/programming/">Programming</HeaderTabs>
+              <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
+              <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
+              <HeaderTabs to="/entrepreneur/">Entrepreneurship</HeaderTabs>
+            </nav>
+          </div>
+          <div className={styles.footerText}>
+            <p>© 2020 Nelson Gardner-Challis. All Rights Reserved.</p>
+          </div>
+          <div className={styles.socialIcons}>
+            <a href="https://github.com/NelsonG-C">
+              <FaGithub />
+            </a>
+            <a href="mailto:nelsongc59@gmail.com">
+              <FaEnvelope />
+            </a>
+            <a href="https://www.linkedin.com/in/nelsongc/">
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
