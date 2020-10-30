@@ -6,7 +6,8 @@ import styles from "../components/layout.module.css"
 
 export default function BlogPost({ data, location }) {
   const post = data.markdownRemark
-  // may need to move menu component into layout with a conditional or make a new layout
+  console.log(post)
+  // consider addng next article button
   return (
     <div className={styles.content}>
       <SideMenu location={location} />
@@ -14,6 +15,12 @@ export default function BlogPost({ data, location }) {
         <Layout>
           <div className={styles.layout}>
             <div className={styles.contentContainer}>
+              <p className={styles.postNote}>
+                <span></span>
+                {post.frontmatter.date}
+                <span>•</span>
+                <span>{post.frontmatter.readTime}</span>
+              </p>
               <h1>{post.frontmatter.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
@@ -30,6 +37,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
+        readTime
       }
     }
   }
