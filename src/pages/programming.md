@@ -1,6 +1,7 @@
 ---
 title: "Programming Deep Dive"
 date: "2020-06-29"
+readTime: "2 min read"
 ---
 
 This is the first week of my Deep Dive projects. I chose programming because I had gained some notable experience with it in my previous job. I had worked at a startup, and so half of my job had been centred around programming when I wasn't managing logistics.
