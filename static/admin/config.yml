@@ -5,11 +5,22 @@ backend:
 media_folder: "static/images/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "entrepreneur"
+    label: "Entrepreneur"
+    folder: "src/content/entrepreneur"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "altMeat"
+    label: "Alt Meat"
+    folder: "src/content/altMeat"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
