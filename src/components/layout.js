@@ -38,24 +38,24 @@ export default function Layout({ children, location }) {
               </div>
             </div>
             <div className={styles.colAuto}>
-              <ul>
-                <div className={styles.headerItem}>
+              <div className={styles.headerMenu}>
+                <div className={`${styles.headerItem} ${styles.colHeader}`}>
                   <img src={comp} alt="" className={styles.headerIcons} />
                   <HeaderTabs to="/programming/">Programming</HeaderTabs>
                 </div>
-                <div className={styles.headerItem}>
+                <div className={`${styles.headerItem} ${styles.colHeader}`}>
                   <img src={petriDish} alt="" className={styles.headerIcons} />
                   <HeaderTabs to="/altmeat/">Alt Meat</HeaderTabs>
                 </div>
-                <div className={styles.headerItem}>
+                <div className={`${styles.headerItem} ${styles.colHeader}`}>
                   <img src={brain} alt="" className={styles.headerIcons} />
                   <HeaderTabs to="/neuroscience/">Neuroscience</HeaderTabs>
                 </div>
-                <div className={styles.headerItem}>
+                <div className={`${styles.headerItem} ${styles.colHeader}`}>
                   <img src={note} alt="" className={styles.headerIcons} />
                   <HeaderTabs to="/entrepreneur/">Entrepreneurship</HeaderTabs>
                 </div>
-              </ul>
+              </div>
             </div>
           </div>
         </div>
