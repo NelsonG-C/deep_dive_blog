@@ -1,4 +1,4 @@
-# :wave: Deep Dive :wave:
+# :water_wave: Deep Dive :water_wave:
 
 ## Exploring Unknown Knowledge Areas
 
