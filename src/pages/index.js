@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import profile from "../images/profile.jpg"
 import styles from "../components/layout.module.css"
-import sea from "../images/sea1.jpg"
 import { Link } from "gatsby"
 import "./styles.css"
 
@@ -138,9 +137,9 @@ export default function Home() {
               </div>
               <div>
                 <h2>Read about programming, the first Deep Dive week</h2>
-                <button>
+                <button className={styles.blogButton}>
                   <Link to="/programming">
-                    <h1 className={styles.title}>Programming Deep Dive</h1>
+                    <p>Programming Deep Dive</p>
                   </Link>
                 </button>
               </div>
