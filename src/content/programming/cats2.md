@@ -1,6 +1,7 @@
 ---
 title: "Day 2: Finding New Resources"
 date: "2020-06-30"
+readTime: " 3 min read"
 ---
 
 # Learning Time
