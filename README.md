@@ -8,18 +8,20 @@ Created by Nelson Gardner-Challis (@NelsonG-C)
 
 ## Project Overview
 
-This Blog was built as a challenge to learn GatsbyJS and share part of my career planning journey.
-I implemented a tech stack of GatsbyJS/React/JavaScript, GraphQL, hosted with Netlify and using Netlify CMS.
+A GatsbyJS that outlines a career planning challenge that I completed in July 2020. I ran this experiment to help determine my next major career direction.
+
+I created this project with the following:
+* GatsbyJS
+* React
+* JavaScript
+* GraphQL
+
+![DeepDiveBlog](./static/admin/images/uploads/DeepDive.JPG)
+
+The website is hosted with Netlify and uses Netlify CMS.
 
 ## Feedback welcome!
 
-You can [file it as an issue](https://github.com/NelsonG-C/deep_dive_blog/issues)
-
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+If you have any thoughts about the project, or suggestions to add, you can [file it as an issue](https://github.com/NelsonG-C/deep_dive_blog/issues) here. Thanks!
 
 <!-- AUTO-GENERATED-CONTENT:END -->
