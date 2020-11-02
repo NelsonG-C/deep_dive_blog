@@ -9,16 +9,41 @@ collections:
     label: "Entrepreneur"
     folder: "src/content/entrepreneur"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slugName}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Slug name", name: "slugName", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "string" }
+      - { label: "Read Time", name: "readTime", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "altMeat"
     label: "Alt Meat"
     folder: "src/content/altMeat"
+    create: true
+    slug: "{{slugName}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug name", name: "slugName", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "string" }
+      - { label: "Read Time", name: "readTime", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "neuroscience"
+    label: "Neuroscience"
+    folder: "src/content/neuroscience"
+    create: true
+    slug: "{{slugName}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug name", name: "slugName", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "string" }
+      - { label: "Read Time", name: "readTime", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "programming"
+    label: "Programming"
+    folder: "src/content/programming"
     create: true
     slug: "{{slugName}}"
     fields:
