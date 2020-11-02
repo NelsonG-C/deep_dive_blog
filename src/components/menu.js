@@ -19,7 +19,7 @@ export default function SideMenu({ location }) {
         Introduction
       </Link>
       {getMenuLinks(slug)}
-      <Link className="menu-item" to={`/${slug}/Summary`}>
+      <Link className="menu-item" to={`/${slug}/summary`}>
         Summary
       </Link>
     </Menu>
@@ -30,7 +30,7 @@ const getMenuLinks = slug => {
   var content = []
   for (var i = 1; i < 6; i++) {
     content.push(
-      <Link className="menu-item" to={`/${slug}/Day${i}`}>
+      <Link className="menu-item" to={`/${slug}/day${i}`}>
         Day {i}
       </Link>
     )
