@@ -5,6 +5,8 @@ import styles from "../components/layout.module.css"
 import { Link } from "gatsby"
 import "./styles.css"
 
+import SEO from "../components/seo"
+
 export default function Home() {
   //Code contains sections for landing page
   //Whole page image
@@ -16,6 +18,7 @@ export default function Home() {
     <div>
       <div>
         <Layout>
+          <SEO title="Deep Dive Blog" />
           <div>
             <div className={styles.frontPageImage}>
               <div className={styles.imageOverlay}>
