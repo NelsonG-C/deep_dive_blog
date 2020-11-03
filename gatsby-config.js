@@ -8,6 +8,8 @@ module.exports = {
   siteMetadata: {
     title: "Deep Dive",
     description: "Exploring areas of interest",
+    author: "Nelson Gardner-Challis",
+    keywords: ["Deep Dive", "programming", "career", "neuroscience"],
   },
   /* Your site config here */
   plugins: [
