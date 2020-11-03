@@ -22,7 +22,7 @@ export default function Layout({ children, location }) {
       <header>
         <div className={`${styles.container} ${styles.headerOverlay}`}>
           <div className={styles.row}>
-            <div className={styles.colAuto}>
+            <div className={`${styles.headerWidth} ${styles.colAuto}`}>
               <div className={styles.heading}>
                 <div>
                   <img src={logo} alt="Hello" className={styles.logo} />
@@ -37,7 +37,7 @@ export default function Layout({ children, location }) {
                 </div>
               </div>
             </div>
-            <div className={styles.colAuto}>
+            <div className={`${styles.colAuto} ${styles.headerIcons}`}>
               <div className={styles.headerMenu}>
                 <div className={`${styles.headerItem} ${styles.colHeader}`}>
                   <img src={comp} alt="" className={styles.headerIcons} />

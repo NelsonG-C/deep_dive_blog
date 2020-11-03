@@ -16,10 +16,10 @@ export default function Home() {
     <div>
       <div>
         <Layout>
-          <div style={{ marginBottom: "1rem", objectFit: "cover" }}>
+          <div>
             <div className={styles.frontPageImage}>
               <div className={styles.imageOverlay}>
-                <div className="grid-container">
+                <div className={styles.row}>
                   <div className={styles.overlayText}>
                     <h4>
                       Hi, I'm Nelson. I'm a software developer based in

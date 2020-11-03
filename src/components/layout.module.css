@@ -1,6 +1,7 @@
 html {
   background-color: floralwhite;
 }
+
 h1,
 h2 {
   text-shadow: none;
@@ -17,6 +18,54 @@ a {
 li {
   margin-right: 0.5rem !important;
   margin-left: 0.5rem !important;
+}
+
+/* CSS taken from Bootstrap to avoid clashing */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+/* CUSTOM CSS */
+.imageTextBox {
+  display: flex;
+  flex: 0 0 auto;
+  width: 50%;
+  padding-left: 5rem;
+}
+
+.overlayText {
+  flex: 0 0 auto;
+  width: 50%;
 }
 
 .layout {
@@ -93,16 +142,10 @@ li {
   width: 300px;
   height: 300px;
   float: right;
-  margin-right: 3.5rem;
-  margin-top: 2rem;
+  margin: 2rem 3rem;
   border: 0.5px solid #21313c;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
   box-shadow: 0px 5px 5px 0px rgba(33, 49, 60, 0.65);
-}
-
-.imageTextBox {
-  display: inline-block;
-  width: 100%;
 }
 
 .frontPageImage {
@@ -158,11 +201,6 @@ header {
   background-color: #30414d;
 }
 
-.overlayText {
-  margin-left: 1rem;
-  max-width: 600px;
-}
-
 .overlayText h4 {
   color: #1ca086;
 }
@@ -212,7 +250,12 @@ span {
   margin: 0.25rem 0.1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
+  .profilePicture {
+    width: 70%;
+    height: 100%;
+  }
+
   .layout {
     margin: 0;
   }
@@ -235,15 +278,6 @@ span {
     display: none;
   }
 
-  .profilePicture {
-    display: none;
-  }
-
-  .imageTextBox {
-    display: flex;
-    width: 100%;
-  }
-
   .frontPageImage {
     background-image: none;
     box-shadow: none;
@@ -260,12 +294,7 @@ span {
   }
 
   .headerItem li {
-    font-size: 12px;
-  }
-
-  .overlayText {
-    margin-left: 1rem;
-    max-width: 600px;
+    font-size: 16px;
   }
 
   .overlayText h4 {
@@ -300,41 +329,38 @@ span {
   span {
     margin-left: 0.25rem;
   }
+
+  .headerWidth {
+    padding-right: 3rem !important;
+  }
 }
 
-/* CSS taken from Bootstrap to avoid clashing */
-.container,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-  --bs-gutter-x: 1.5rem;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) / 2);
-  padding-left: calc(var(--bs-gutter-x) / 2);
-  margin-right: auto;
-  margin-left: auto;
-}
+@media (max-width: 1100.98px) {
+  .heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
 
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
-  margin-left: calc(var(--bs-gutter-x) / -2);
-}
+  .headerWidth {
+    width: 100% !important;
+  }
 
-.row > * {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) / 2);
-  padding-left: calc(var(--bs-gutter-x) / 2);
-  margin-top: var(--bs-gutter-y);
+  .profilePicture {
+    margin: 0 auto;
+  }
+
+  .overlayText {
+    flex: 0 0 auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .imageTextBox {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .colAuto {
@@ -367,7 +393,7 @@ span {
   width: 41.666667%;
 }
 
-.col-6 {
+.col6 {
   flex: 0 0 auto;
   width: 50%;
 }
